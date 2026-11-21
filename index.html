@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Tienda Andina · Café, cacao y artesanías de Colombia</title>
+  <link rel="stylesheet" href="css/estilos.css">
+  <script src="js/config.js"></script>
+  <script src="js/productos.js"></script>
+  <script src="js/carrito.js"></script>
+  <script src="js/analytics.js"></script>
+</head>
+<body>
+  <header class="cabecera">
+    <a class="logo" href="index.html">Tienda <span>Andina</span></a>
+    <nav class="menu">
+      <a href="index.html">Catálogo</a>
+      <a class="enlace-carrito" href="carrito.html">Carrito (<span data-contador-carrito>0</span>)</a>
+    </nav>
+  </header>
+
+  <main class="contenedor">
+    <section class="promo" id="promo">
+      <div>
+        <p class="promo-etiqueta">Bienvenida</p>
+        <h1>10 % de descuento en tu primera compra</h1>
+        <p>Usa el cupón <strong>BIENVENIDA10</strong> en el carrito. Enviamos a toda Colombia y al exterior.</p>
+      </div>
+      <button type="button" class="boton boton-claro" id="usar-cupon">Usar cupón</button>
+    </section>
+
+    <h2 class="titulo-seccion">Catálogo</h2>
+    <div class="grilla" id="catalogo"></div>
+  </main>
+
+  <footer class="pie">
+    <p>Sitio académico de simulación · Diplomado en E-commerce y Negocios Internacionales Digitales.</p>
+    <p>No se procesan pagos ni se guardan datos personales. Este sitio usa Google Analytics 4 para fines de aprendizaje.</p>
+  </footer>
+
+  <script src="js/inicio.js"></script>
+</body>
+</html>

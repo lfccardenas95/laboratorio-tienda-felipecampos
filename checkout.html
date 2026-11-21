@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Finalizar compra · Tienda Andina</title>
+  <link rel="stylesheet" href="css/estilos.css">
+  <script src="js/config.js"></script>
+  <script src="js/productos.js"></script>
+  <script src="js/carrito.js"></script>
+  <script src="js/analytics.js"></script>
+</head>
+<body>
+  <header class="cabecera">
+    <a class="logo" href="index.html">Tienda <span>Andina</span></a>
+    <nav class="menu">
+      <a href="index.html">Catálogo</a>
+      <a class="enlace-carrito" href="carrito.html">Carrito (<span data-contador-carrito>0</span>)</a>
+    </nav>
+  </header>
+
+  <main class="contenedor">
+    <h1>Finalizar compra</h1>
+    <p class="aviso oculto" id="vacio">No hay productos para pagar. <a href="index.html">Ir al catálogo</a></p>
+    <p class="aviso">Simulación académica: no escribas datos personales reales.</p>
+
+    <div class="carrito-layout" id="pasos">
+      <div>
+        <form class="paso" id="paso-envio">
+          <h2><span class="numero">1</span> Envío</h2>
+          <label for="nombre">Nombre (ficticio)</label>
+          <input id="nombre" type="text" placeholder="Ej.: Cliente de prueba" autocomplete="off">
+          <label for="pais">País de destino</label>
+          <select id="pais"></select>
+          <fieldset>
+            <legend>Tipo de envío</legend>
+            <label class="opcion"><input type="radio" name="envio" value="Estándar" checked> <span>Estándar</span> <span class="costo" data-costo="Estándar"></span></label>
+            <label class="opcion"><input type="radio" name="envio" value="Express"> <span>Express</span> <span class="costo" data-costo="Express"></span></label>
+          </fieldset>
+          <button type="submit" class="boton">Continuar al pago</button>
+        </form>
+
+        <form class="paso bloqueado" id="paso-pago">
+          <h2><span class="numero">2</span> Pago</h2>
+          <fieldset id="medios-pago" disabled>
+            <legend>Medio de pago (simulado)</legend>
+            <label class="opcion"><input type="radio" name="pago" value="Tarjeta de crédito" checked> Tarjeta de crédito</label>
+            <label class="opcion"><input type="radio" name="pago" value="PSE"> PSE</label>
+            <label class="opcion"><input type="radio" name="pago" value="Nequi"> Nequi</label>
+            <label class="opcion"><input type="radio" name="pago" value="PayPal"> PayPal</label>
+          </fieldset>
+          <button type="submit" class="boton" id="pagar" disabled>Pagar (simulado)</button>
+        </form>
+      </div>
+
+      <aside class="resumen">
+        <h2>Tu pedido</h2>
+        <ul class="lista-resumen" id="lista-resumen"></ul>
+        <dl class="totales">
+          <dt>Subtotal</dt><dd id="r-subtotal"></dd>
+          <dt>Descuento</dt><dd id="r-descuento"></dd>
+          <dt>Envío</dt><dd id="r-envio"></dd>
+          <dt class="total">Total</dt><dd class="total" id="r-total"></dd>
+        </dl>
+      </aside>
+    </div>
+  </main>
+
+  <footer class="pie">
+    <p>Sitio académico de simulación · Diplomado en E-commerce y Negocios Internacionales Digitales.</p>
+    <p>No se procesan pagos ni se guardan datos personales. Este sitio usa Google Analytics 4 para fines de aprendizaje.</p>
+  </footer>
+
+  <script src="js/checkout.js"></script>
+</body>
+</html>

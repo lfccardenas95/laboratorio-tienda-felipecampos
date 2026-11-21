@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Gracias por tu compra · Tienda Andina</title>
+  <link rel="stylesheet" href="css/estilos.css">
+  <script src="js/config.js"></script>
+  <script src="js/productos.js"></script>
+  <script src="js/carrito.js"></script>
+  <script src="js/analytics.js"></script>
+</head>
+<body>
+  <header class="cabecera">
+    <a class="logo" href="index.html">Tienda <span>Andina</span></a>
+    <nav class="menu">
+      <a href="index.html">Catálogo</a>
+      <a class="enlace-carrito" href="carrito.html">Carrito (<span data-contador-carrito>0</span>)</a>
+    </nav>
+  </header>
+
+  <main class="contenedor">
+    <section class="confirmacion oculto" id="confirmacion">
+      <p class="promo-etiqueta">Compra simulada</p>
+      <h1>¡Gracias por tu compra!</h1>
+      <p>Pedido <strong id="c-id"></strong></p>
+      <dl class="totales">
+        <dt>Productos</dt><dd id="c-valor"></dd>
+        <dt>Envío</dt><dd id="c-envio"></dd>
+        <dt>Destino</dt><dd id="c-destino"></dd>
+        <dt>Medio de pago</dt><dd id="c-pago"></dd>
+        <dt class="total">Total pagado</dt><dd class="total" id="c-total"></dd>
+      </dl>
+      <a class="boton" href="index.html">Volver a la tienda</a>
+    </section>
+    <p class="aviso oculto" id="sin-pedido">No hay un pedido nuevo para confirmar. <a href="index.html">Ir al catálogo</a></p>
+  </main>
+
+  <footer class="pie">
+    <p>Sitio académico de simulación · Diplomado en E-commerce y Negocios Internacionales Digitales.</p>
+    <p>No se procesan pagos ni se guardan datos personales. Este sitio usa Google Analytics 4 para fines de aprendizaje.</p>
+  </footer>
+
+  <script src="js/gracias.js"></script>
+</body>
+</html>
